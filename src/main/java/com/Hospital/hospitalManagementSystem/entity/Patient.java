@@ -14,7 +14,7 @@ import java.util.Set;
 @Entity
 @Getter
 @Setter
-@ToString
+
 public class Patient {
 
     @Id
@@ -40,6 +40,7 @@ public class Patient {
     @JoinColumn(name = "patient_insurance", unique = true) //foreign key
     private Insurance insurance; // owner side
 
-    @OneToMany(mappedBy = "patient")// inverse side
+    @OneToMany(mappedBy = "patient")
+    @ToString.Exclude// inverse side
     private Set<Appointment> appointment = new HashSet<>();
 }

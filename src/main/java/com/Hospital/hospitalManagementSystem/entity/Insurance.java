@@ -2,6 +2,7 @@ package com.Hospital.hospitalManagementSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -28,6 +29,7 @@ public class Insurance {
     @Column(nullable = false)
     private LocalDate ValidDate;
 
+    @CreationTimestamp
     @Column(nullable = false , unique = false)
     private LocalDateTime CreatedAt;
 
