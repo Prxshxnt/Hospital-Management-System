@@ -47,5 +47,7 @@ public class PatientServiceTest {
 
         var updateAppointment = appointmentService.createANewAppointment(appointment,1l,1l);
         System.out.println(updateAppointment);
+
+        patientService.deletePatient(1L);
     }
 }

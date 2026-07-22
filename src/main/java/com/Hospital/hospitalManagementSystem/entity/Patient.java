@@ -39,7 +39,7 @@ public class Patient {
     @JoinColumn(name = "patient_insurance", unique = true) //foreign key
     private Insurance insurance; // owner side
 
-    @OneToMany(mappedBy = "patient")
+    @OneToMany(mappedBy = "patient" , cascade = CascadeType.ALL)
     @ToString.Exclude// inverse side
     private Set<Appointment> appointment = new HashSet<>();
 }
