@@ -30,7 +30,6 @@ public class PatientServiceTest {
     public void getCPatient(){
 
 //        List<BloodGroupStats> bloodGroupStatsList = patientRepo.getAllPatientBloodGroupStats();
-//
 //        for(var p : bloodGroupStatsList){
 //            System.out.println(p);
 
