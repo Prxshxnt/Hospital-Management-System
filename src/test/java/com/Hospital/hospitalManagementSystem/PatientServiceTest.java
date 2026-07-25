@@ -33,6 +33,7 @@ public class PatientServiceTest {
 //        for(var p : bloodGroupStatsList){
 //            System.out.println(p);
 
+
         patientService.testPatientTransaction();
 
     }
