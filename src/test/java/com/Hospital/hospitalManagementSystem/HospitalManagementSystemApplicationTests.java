@@ -28,10 +28,6 @@ public class HospitalManagementSystemApplicationTests {
 	public void getPatient() {
 		List<IPatientInfo> iPatientInfos = patientRepo.getAllPatientsInfo();{
 
-//		iPatientInfos.forEach(p ->{
-//			System.out.println(p.getId() + " " +p.getName()+" "+
-//					p.getEmail());
-//		});
 			for (IPatientInfo p : iPatientInfos) {
 				System.out.println(p);
 			}
