@@ -27,6 +27,9 @@ public class InsuranceTest {
 
         System.out.println(updateInsurance);
 
+        var patient = insuranceService.deleteInsuranceToPatient(1L);
+        System.out.println(patient);
+
     }
 
 }

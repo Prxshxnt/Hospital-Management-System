@@ -16,7 +16,7 @@ public class InsuranceService {
     private final PatientRepo patientRepo;
 
     @Transactional
-    public Insurance assignInsuranceToPatient(Insurance insurance , Long patientId) {
+    public Insurance assignInsuranceToPatient(Insurance insurance, Long patientId) {
         Patient patient = patientRepo.findById(patientId).orElseThrow();
 
         patient.setInsurance(insurance);
@@ -26,4 +26,23 @@ public class InsuranceService {
 
 
     }
-}
+
+    @Transactional
+    public Insurance updateInsuranceToPatient(Insurance insurance, Long patientId) {
+        Patient patient = patientRepo.findById(patientId).orElseThrow();
+
+        patient.setInsurance(insurance);
+
+        insurance.setPatient(patient);
+        return insuranceRepository.save(insurance);
+    }
+
+    @Transactional
+    public Patient deleteInsuranceToPatient(Long patientId) {
+        Patient patient = patientRepo.findById(patientId).orElseThrow();
+
+        patient.setInsurance(null);
+
+        return patient;
+    }
+    }
