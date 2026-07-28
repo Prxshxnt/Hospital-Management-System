@@ -18,7 +18,6 @@ public class HospitalManagementSystemApplicationTests {
 //	@Test
 //	public void testPatient(){
 //		List<Patient> patientList = patientRepo.findAll();
-//
 //		for (Patient p : patientList){
 //			System.out.println(p);
 //		}
