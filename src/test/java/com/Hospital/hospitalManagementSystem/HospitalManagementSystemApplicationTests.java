@@ -14,15 +14,6 @@ public class HospitalManagementSystemApplicationTests {
 	@Autowired
 	private PatientRepo patientRepo;
 
-
-//	@Test
-//	public void testPatient(){
-//		List<Patient> patientList = patientRepo.findAll();
-//		for (Patient p : patientList){
-//			System.out.println(p);
-//		}
-//	}
-
 	@Test
 	public void getPatient() {
 		List<IPatientInfo> iPatientInfos = patientRepo.getAllPatientsInfo();{
@@ -32,5 +23,13 @@ public class HospitalManagementSystemApplicationTests {
 			}
 		}
 	}
+
+	//	@Test
+//	public void testPatient(){
+//		List<Patient> patientList = patientRepo.findAll();
+//		for (Patient p : patientList){
+//			System.out.println(p);
+//		}
+//	}
 }
 
